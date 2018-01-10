@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+
+
+<html>
+    <head>
+
+    <!--
+          Here are all of the style sheets.
+    -->
+<link rel=stylesheet href="game_files/j_e_css/css_one.css" type="text/css">
+<!-- <link rel=stylesheet href="game_files/j_e_css/__pre_battle_screen_style_sheet__.css" type="text/css"> -->
+<link rel=stylesheet href="game_files/j_e_css/more_characters.css" type="text/css">
+<link rel=stylesheet href="game_files/j_e_css/more_knights.css" type="text/css">
+<link rel=stylesheet href="game_files/j_e_css/more_archers.css" type="text/css">
+<link rel=stylesheet href="game_files/j_e_css/more_knights.css" type="text/css">
+
+<p id="loading_shield" class="z_pos_1000">  game is loading... </p>
+
+<p id="mpt level placements through ids"></p>
+<p id="cle level placements through ids"></p>
+<p id="health_bars_placements_through_ids"></p>
+
+<!--
+      Here are all of the jQuery library references.
+-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+	</head>
+
+    <body>
+
+		<!-- i don't think there is anything in this paragraph right now  		-->
+		<p id="pre-first paragraph" position="fixed">
+		</p>
+
+		<!-- z 0 level. 100 divs get generated here, if it is a 10 x 10 map		-->
+        <p id="paragraph of z0 level" position="fixed">
+		</p>
+
+		<!-- i don't think there is anything in this paragraph right now  		-->
+		<p id ="second paragraph" position="fixed">
+		</p>
+
+		<!-- z 3 level. 100 divs get generated here, if it is a 10 x 10 map		-->
+		<p id="paragraph of z3 level"></p>
+    <p id="health_bars_paragraph"></p>
+
+		<p id="map paragraph">
+		</p>
+
+		<p id="in-game general menu">
+			<div class="clickable_ex_char_menu_part attack_option z_index_neg_4 talk_menu_option" style="width:114px; height: 24px; display: inline-block; position: fixed; border-radius: 5px;">talk</div>
+			<div class="clickable_ex_char_menu_part attack_option z_index_neg_4 attack_menu_option" style="width:114px; height: 24px; display: inline-block; position: fixed; border-radius: 5px;">attack</div>
+			<div class="clickable_ex_char_menu_part attack_option z_index_neg_4 heal_menu_option" style="width:114px; height: 24px; display: inline-block; position: fixed; border-radius: 5px;">heal</div>
+			<div class="clickable_ex_char_menu_part attack_option z_index_neg_4 item_menu_option" style="width:114px; height: 24px; display: inline-block; position: fixed; border-radius: 5px;">item</div>
+			<div class="clickable_ex_char_menu_part attack_option z_index_neg_4 trade_menu_option" style="width:114px; height: 24px; display: inline-block; position: fixed; border-radius: 5px;">trade</div>
+			<div class="clickable_ex_char_menu_part attack_option z_index_neg_4 other_menu_option" style="width:114px; height: 24px; display: inline-block; position: fixed; border-radius: 5px;">other</div>
+			<div class="clickable_ex_char_menu_part attack_option z_index_neg_4 wait_menu_option" style="width:114px; height: 24px; display: inline-block; position: fixed; border-radius: 5px;">wait</div>
+		</p>
+
+    <!-- standing for "pre battle attach screen paragraph"-->
+
+      <p id="left_char_name" class="pre_battle_screen_element_neg4"></p>
+      <p id="left_weap_name" class="pre_battle_screen_element_neg4"></p>
+      <p id="left_weap_uses" class="pre_battle_screen_element_neg4"></p>
+
+      <p id="left_hp_marker" class="pre_battle_screen_element_neg4"></p>
+      <p id="left_curr_hp" class="pre_battle_screen_element_neg4"></p>
+      <p id="left_max_hp" class="pre_battle_screen_element_neg4"></p>
+      <p id="left_damage_marker" class="pre_battle_screen_element_neg4"></p>
+      <p id="left_damage" class="pre_battle_screen_element_neg4"></p>
+      <p id="left_hit_marker" class="pre_battle_screen_element_neg4"></p>
+      <p id="left_hit" class="pre_battle_screen_element_neg4"></p>
+      <p id="left_crit_marker" class="pre_battle_screen_element_neg4"></p>
+      <p id="left_crit" class="pre_battle_screen_element_neg4"></p>
+
+      <p id="right_char_name" class="pre_battle_screen_element_neg4"></p>
+      <p id="right_weap_uses" class="pre_battle_screen_element_neg4"></p>
+      <p id="right_weap_name" class="pre_battle_screen_element_neg4"></p>
+      <p id="right_hp_marker" class="pre_battle_screen_element_neg4"></p>
+
+      <p id="right_curr_hp" class="pre_battle_screen_element_neg4"></p>
+      <p id="right_max_hp" class="pre_battle_screen_element_neg4"></p>
+      <p id="right_damage_marker" class="pre_battle_screen_element_neg4"></p>
+      <p id="right_damage" class="pre_battle_screen_element_neg4"></p>
+      <p id="right_hit_marker" class="pre_battle_screen_element_neg4"></p>
+      <p id="right_hit" class="pre_battle_screen_element_neg4"></p>
+      <p id="right_crit_marker" class="pre_battle_screen_element_neg4"></p>
+      <p id="right_crit" class="pre_battle_screen_element_neg4"></p>
+
+      <p id="pre_atck_rec_left" class="pre_battle_screen_element_neg5 pre_atck_rec_left"></p>
+      <p id="pre_atck_rec_right" class="pre_battle_screen_element_neg5 pre_atck_rec_right"></p>
+
+
+
+  <!--    <div id="phase_change_white_screen" class="phase_change_white_sheet" "z_neg_300"></div>
+  -->
+      <div id="phase_change_1" class="phase_change_border_art"></div>
+      <div id="phase_change_2" class="phase_change_border_art"></div>
+      <div id="phase_change_3" class="phase_change_border_art"></div>
+      <div id="phase_change_4" class="phase_change_border_art"></div>
+                  <!-- i promise to eventually use best practices and actually utilize "base_level" and "text_level"-->
+                  <!-- i don't know if the class on the following is even necessary. there is so much i don't know.  -->
+      <p id="battle_console_center_background" class="battle_console_background_neg_20"></p>
+
+      <p id="battle_console_text_line_1" class="battle_console_text_line" "battle_console_element_neg_20" style="top: 155px"></p>
+      <p id="battle_console_text_line_2" class="battle_console_text_line" "battle_console_element_neg_20" style="top: 175px"></p>
+      <p id="battle_console_text_line_3" class="battle_console_text_line" "battle_console_element_neg_20" style="top: 195px"></p>
+      <p id="battle_console_text_line_4" class="battle_console_text_line" "battle_console_element_neg_20" style="top: 215px"></p>
+
+      <p id="battle_console_text_line_5" class="battle_console_text_line" "battle_console_element_neg_20" style="top: 235px"></p>
+      <p id="battle_console_text_line_6" class="battle_console_text_line" "battle_console_element_neg_20" style="top: 255px"></p>
+      <p id="battle_console_text_line_7" class="battle_console_text_line" "battle_console_element_neg_20" style="top: 275px"></p>
+      <p id="battle_console_text_line_8" class="battle_console_text_line" "battle_console_element_neg_20" style="top: 295px"></p>
+
+
+      <p id="battle_console_text_line_9" class="battle_console_text_line" "battle_console_element_neg_20" style="top: 315px"></p>
+      <p id="battle_console_text_line_10" class="battle_console_text_line" "battle_console_element_neg_20" style="top: 335px"></p>
+      <p id="battle_console_text_line_11" class="battle_console_text_line" "battle_console_element_neg_20" style="top: 355px"></p>
+      <p id="battle_console_text_line_12" class="battle_console_text_line" "battle_console_element_neg_20" style="top: 375px"></p>
+
+      <p id="battle_console_text_line_13" class="battle_console_text_line" "battle_console_element_neg_20" style="top: 395px"></p>
+      <p id="battle_console_text_line_14" class="battle_console_text_line" "battle_console_element_neg_20" style="top: 415px"></p>
+      <p id="battle_console_text_line_15" class="battle_console_text_line" "battle_console_element_neg_20" style="top: 435px"></p>
+      <p id="battle_console_text_line_16" class="battle_console_text_line" "battle_console_element_neg_20" style="top: 455px"></p>
+
+      <p id="battle_console_left_char_bat_art" class="battle_console_char_art_neg_20"></p>
+      <p id="battle_console_right_char_bat_art" class="battle_console_char_art_neg_20"></p>
+
+<script type="text/javascript">
+
+var ericas_status = "unselected";
+var nada = "nada";
+
+
+</script>
+<script type="text/javascript">
+
+
+// KNOBS
+// s c means standard counting notation.
+var MAP_HEIGHT_SC = 10;
+var MAP_WIDTH_SC = 10;
+
+
+
+
+
+// keep the following:
+// this is an example of what all 100 divs used to look like:             <div id="x1y10z3" class="cle" data-coord="3030"></div>
+// key (as in legend):   															^ algebraic-syntax location		  ^ array-syntax location
+
+	for (i = 0; i < MAP_WIDTH_SC; i++) {
+		for (k = 0; k < MAP_HEIGHT_SC; k++) {
+			// this generates all of the css.
+	 	    //--// this generates all of the mpts.
+			//--//--// this generates the divs on the mpt level.
+			document.getElementById("mpt level placements through ids").innerHTML += '<style>#x' + (1 + i).toString() + 'y' + (10 - k).toString() + ' {margin-left: ' + (60 * i).toString() + 'px; margin-top: ' + (60 * k).toString() + 'px} </style>';
+			//--//--// this generates the divs on the cle level.
+			document.getElementById("cle level placements through ids").innerHTML += '<style>#x' + (1 + i).toString() + 'y' + (10 - k).toString() + 'z3 {margin-left: ' + (60 * i).toString() + 'px; margin-top: ' + (60 * k).toString() + 'px} </style>';
+			// this generates all of the html divs.
+			//--// this generates the whole z-3 level.
+			document.getElementById("paragraph of z3 level").innerHTML += '<div id="x' + (1 + i).toString() + 'y' + (10 - k).toString() + 'z3" class="cle" data-coord="3' + k.toString() + '3' + i.toString() + '"></div>';
+			//--// this generates the whole z-0 level. example of notation: <div id="x9y8" class="mpt" data-coord="0208"></div>
+			document.getElementById("paragraph of z0 level").innerHTML += '<div id="x' + (1 + i).toString() + 'y' + (10 - k).toString() + '" class="mpt" data-coord="0' + k.toString() + '0' + i.toString() + '"></div>';
+			// i suppose i could condense all of this even more, but i'm really rather content, and prefer to leave it consisten with earlier models of the program.
+
+      // this generates the health bars, which have their z-index set by their class association.
+      document.getElementById("health_bars_placements_through_ids").innerHTML += '<style>#health_bar_x' + (1 + i).toString() + 'y' + (10 - k).toString() + ' {margin-left: ' + (60 * i).toString() + 'px; margin-top: ' + (52 + (60 * k)).toString() + 'px} </style>';
+      document.getElementById("health_bars_paragraph").innerHTML += '<div id="health_bar_x' + (1 + i).toString() + 'y' + (10 - k).toString() + '" class="health_bar_invisible litte_health_bar" data-coord="4' + k.toString() + '4' + i.toString() + '"></div>';
+		}
+	}
+
+
+
+// this is just here because i haven't programmed it in yet
+document.getElementById("map paragraph").innerHTML += '<div id="map_background_image"class="under"><img src="http://i1038.photobucket.com/albums/a463/yung_link/battle_of_kings_2_zpssz0ebufk.png" height="600" width="600"></div>"';
+//  http://i1038.photobucket.com/albums/a463/yung_link/battle_of_kings_2_zpssz0ebufk.png
+//  http://i1038.photobucket.com/albums/a463/yung_link/Java%20Emblem%20Reference/map%2001%20drawing_zpsezl2soog.png?t=1457202458
+</script>
+<script type="text/javascript" src="game_files/j_e_javascript/static_data/unit_templates.js"></script>
+<script type="text/javascript">
+
+
+
+// red team
+var erica1 = jQuery.extend(true, {}, level20_erica);
+erica1.char_name = "Erica";
+var pent1 = jQuery.extend(true, {}, weak_sage);
+pent1.char_name = "Pent";
+var npc_knight001 = jQuery.extend(true, {}, weak_knight);
+npc_knight001.char_name = "Soldier";
+var npc_knight002 = jQuery.extend(true, {}, weak_knight);
+npc_knight002.char_name = "Soldier";
+
+// green team
+var seth1 = jQuery.extend(true, {}, weak_paladin);
+seth1.char_name = "Seth";
+var npc_knight1 = jQuery.extend(true, {}, weak_knight);
+npc_knight1.char_name = "Soldier";
+var npc_knight2 = jQuery.extend(true, {}, weak_knight);
+npc_knight2.char_name = "Soldier";
+var npc_knight3 = jQuery.extend(true, {}, weak_knight);
+npc_knight3.char_name = "Soldier";
+
+
+
+
+// ** non variable-map-size compatable:
+var exis_char_obj_array = [
+  ['rien', 'rien', 'rien', 'rien', 'rien', 'rien', 'rien', 'rien', 'rien', 'rien'],
+  ['rien', 'rien', 'rien', 'rien', 'rien', 'rien', 'rien', 'rien', 'rien', 'rien'],
+  ['rien', 'rien', 'rien', 'rien', 'rien', 'rien', 'rien', 'rien', 'rien', 'rien'],
+  ['rien', 'rien', 'rien', 'rien', 'rien', 'rien', 'rien', 'rien', 'rien', 'rien'],
+  ['rien', 'rien', 'rien', 'rien', 'rien', 'rien', 'rien', 'rien', 'rien', 'rien'],
+  ['rien', 'rien', 'rien', 'rien', 'rien', 'rien', 'rien', 'rien', 'rien', 'rien'],
+  ['rien', 'rien', 'rien', 'rien', 'rien', 'rien', 'rien', 'rien', 'rien', 'rien'],
+  ['rien', 'rien', 'rien', 'rien', 'rien', 'rien', 'rien', 'rien', 'rien', 'rien'],
+  ['rien', 'rien', 'rien', 'rien', 'rien', 'rien', 'rien', 'rien', 'rien', 'rien'],
+  ['rien', 'rien', 'rien', 'rien', 'rien', 'rien', 'rien', 'rien', 'rien', 'rien']
+];
+//end
+
+
+
+
+      // i wonder if there is a reason that these have to be without forests.
+
+			var map01hard_dat_array = [
+        ["_", "_", "_", "_", "_", "_", "_", "_", "_", "_"],
+        ["_", "X", "_", "_", "_", "_", "_", "_", "_", "_"],
+        ["_", "X", "_", "_", "_", "_", "_", "X", "_", "_"],
+        ["_", "X", "_", "_", "X", "_", "_", "_", "_", "_"],
+        ["_", "_", "_", "_", "_", "_", "X", "X", "X", "X"],
+        ["X", "X", "X", "X", "_", "_", "_", "_", "_", "_"],
+        ["_", "_", "_", "_", "_", "X", "_", "_", "X", "_"],
+        ["_", "_", "X", "_", "_", "_", "_", "_", "X", "_"],
+        ["_", "_", "_", "_", "_", "_", "_", "_", "X", "_"],
+        ["_", "_", "_", "_", "_", "_", "_", "_", "_", "_"]
+			];
+
+			var map01dyn_array = [
+        ["_", "_", "_", "_", "_", "_", "_", "_", "_", "_"],
+        ["_", "X", "_", "_", "_", "_", "_", "_", "_", "_"],
+        ["_", "X", "_", "_", "_", "_", "_", "X", "_", "_"],
+        ["_", "X", "_", "_", "X", "_", "_", "_", "_", "_"],
+        ["_", "_", "_", "_", "_", "_", "X", "X", "X", "X"],
+        ["X", "X", "X", "X", "_", "_", "_", "_", "_", "_"],
+        ["_", "_", "_", "_", "_", "X", "_", "_", "X", "_"],
+        ["_", "_", "X", "_", "_", "_", "_", "_", "X", "_"],
+        ["_", "_", "_", "_", "_", "_", "_", "_", "X", "_"],
+        ["_", "_", "_", "_", "_", "_", "_", "_", "_", "_"]
+			];
+
+
+      /*
+
+      copy from this and paste this for an alternate map
+      watch your array syntax!!
+
+      ["_", "_", "_", "_", "_", "X", "_", "X", "X", "X"],
+      ["_", "_", "_", "_", "_", "X", "_", "X", "_", "X"],
+      ["_", "_", "_", "_", "_", "X", "_", "_", "_", "_"],
+      ["_", "_", "_", "_", "X", "X", "X", "X", "_", "X"],
+      ["_", "_", "_", "_", "_", "X", "_", "_", "_", "_"],
+      ["W", "_", "W", "W", "_", "_", "_", "_", "_", "_"],
+      ["W", "_", "W", "W", "_", "_", "_", "_", "_", "_"],
+      ["_", "_", "_", "W", "W", "_", "_", "_", "_", "_"],
+      ["_", "_", "_", "W", "W", "_", "_", "_", "_", "_"],
+      ["_", "_", "_", "W", "W", "_", "_", "_", "_", "_"]
+
+      copy from this and paste this for an alternate map
+      watch your array syntax!!
+
+      ["_", "_", "_", "_", "_", "_", "_", "_", "_", "_"],
+      ["_", "X", "_", "_", "_", "_", "_", "_", "_", "_"],
+      ["_", "X", "_", "_", "_", "_", "_", "X", "_", "_"],
+      ["_", "X", "_", "_", "X", "_", "_", "_", "_", "_"],
+      ["_", "_", "_", "_", "_", "_", "X", "X", "X", "X"],
+      ["X", "X", "X", "X", "_", "_", "_", "_", "_", "_"],
+      ["_", "_", "_", "_", "_", "X", "_", "_", "X", "_"],
+      ["_", "_", "X", "_", "_", "_", "_", "_", "X", "_"],
+      ["_", "_", "_", "_", "_", "_", "_", "_", "X", "_"],
+      ["_", "_", "_", "_", "_", "_", "_", "_", "_", "_"]
+
+
+      */
+
+
+			var doNothing = "nothing";
+
+</script>
+
+<!--
+Major Game Functions
+-->
+  <!--the movement prediction algorithm-->
+<script type="text/javascript" src="game_files/j_e_javascript/functions/major_game_functions/__movement_prediction_algorithm__.js"></script>
+
+  <!--the extended character attack prediction algorithm-->
+<script type="text/javascript" src="game_files/j_e_javascript/functions/major_game_functions/__extended_character_attack_prediction_algorithm__.js"></script>
+  <!--the battle event handler-->
+<script type="text/javascript" src="game_files/j_e_javascript/functions/major_game_functions/__battle_event_handler_v1__.js"></script>
+<!--end major game functions-->
+
+<script type="text/javascript">
+
+      // VARIABLES AND STUFF
+
+			var gl_sel_char_tag_rec = "none";
+			var char_select_status = "unselected";
+			var selected_character_name = "placeholder";
+			var nada = "nada";
+
+			var team_of_current_phase = "green";
+			var color_of_opposite_team = "red";
+			// pre front-material possible game states: see the document. "Game States Chart."
+			// "enemy unit move" will hopefully just be a mousever function in open map.
+			// "open map", "character selected" "in-game general menu", "in game option menu", "extended character", "inventory screen", "use alert",
+			// "select target" "pre attack" "select trading parter", "trade screen", "select talk partner"
+			var game_state = "open map";
+			var mov_pre_array2 = [];
+      var mov_pre_array_cache = []; // i'm not sure this is really necessary. but it does work.
+			// cache money bank
+      var ex_char_position_k_cache_array_coord = "empty";
+      var ex_char_position_i_cache_array_coord = "empty";
+
+      var ex_char_position_k_cache_converted = "empty";
+			var ex_char_position_i_cache_converted = "empty";
+
+      var ex_char_k_pos_coord = "empty";
+      var ex_char_i_pos_coord = "empty";
+			// in game menu top and left displacements, respectively
+			//global establishment of variables.
+			var i_g_m_top_disp = "placeholding establishment of global-ness.";
+			var i_g_m_left_disp = "placeholding establishment of global-ness.";
+
+      // made for the character death event and health and item adjustments.
+      // the function just uses ex_char_k_pos_coord and ex_char_i_pos_coord
+      // for the attacking unit.
+      var global_def_cha_k_coord = "empty. ";
+      var global_def_cha_i_coord = "empty. ";
+
+      // battle event globals
+      // b e a = battle event array
+      var global_attacker_b_e_a = [];
+      var global_defender_b_e_a = [];
+
+      var global_b_e_atk_name = "empty. ";
+      var global_b_e_def_name = "empty. ";
+
+      var range_of_attack = "empty. " ;
+
+
+
+
+
+			//seth1 generation
+			$('#x1y1z3').switchClass("cle","seth1", 0);
+			$('#x1y1z3').data("chname","seth1");  // 08 load this on the script's back
+			$('#x1y1z3').addClass("unmoved_unit"); // 08 load this on the script's back
+			$('#x1y1z3').addClass("green_unit");  // 08 load this on the script's back
+
+      exis_char_obj_array[9][0] = seth1;
+
+			//npc_knight1 generation
+			$('#x1y2z3').switchClass("cle","npc_knight1", 0);
+			$('#x1y2z3').data("chname","npc_knight1");  // 08 load this on the script's back
+			$('#x1y2z3').addClass("unmoved_unit");  // 08 load this on the script's back
+			$('#x1y2z3').addClass("green_unit");  // 08 load this on the script's back
+
+      exis_char_obj_array[8][0] = npc_knight1;
+
+			//npc_knight2 generation
+			$('#x2y1z3').switchClass("cle","npc_knight2", 0);
+			$('#x2y1z3').data("chname","npc_knight2");  // 08 load this on the script's back
+			$('#x2y1z3').addClass("unmoved_unit");  // 08 load this on the script's back
+			$('#x2y1z3').addClass("green_unit");  // 08 load this on the script's back
+
+      exis_char_obj_array[9][1] = npc_knight2;
+
+			//npc_knight3 generation
+			$('#x2y2z3').switchClass("cle","npc_knight3", 0);
+			$('#x2y2z3').data("chname","npc_knight3");  // 08 load this on the script's back
+			$('#x2y2z3').addClass("unmoved_unit");  // 08 load this on the script's back
+			$('#x2y2z3').addClass("green_unit");  // 08 load this on the script's back
+
+      exis_char_obj_array[8][1] = npc_knight3;
+
+//  red team generation
+
+            //erica1 generation
+			$('#x4y2z3').switchClass("cle","erica1", 0);
+			$('#x4y2z3').data("chname","erica1"); // 08 and so on ...
+			$('#x4y2z3').addClass("unmoved_unit");
+			$('#x4y2z3').addClass("red_unit");
+
+      exis_char_obj_array[8][3] = erica1;
+
+
+			//pent1 generation
+			$('#x4y1z3').switchClass("cle","pent1", 0);
+			$('#x4y1z3').data("chname","pent1");
+			$('#x4y1z3').addClass("unmoved_unit");
+			$('#x4y1z3').addClass("red_unit");
+
+      exis_char_obj_array[9][3] = pent1;
+
+			//npc_knight001 generation
+			$('#x9y9z3').switchClass("cle","npc_knight001", 0);
+			$('#x9y9z3').data("chname","npc_knight001");
+			$('#x9y9z3').addClass("unmoved_unit");
+			$('#x9y9z3').addClass("red_unit");
+
+      exis_char_obj_array[1][8] = npc_knight001;
+
+			//npc_knight002 generation
+			$('#x10y9z3').switchClass("cle","npc_knight002", 0);
+			$('#x10y9z3').data("chname","npc_knight002");
+			$('#x10y9z3').addClass("unmoved_unit");
+			$('#x10y9z3').addClass("red_unit");
+
+      exis_char_obj_array[1][9] = npc_knight002;
+
+
+// ----------------------------------------------------------------------------------
+// ----------------------------------------------------------------------------------
+// -----------------------------------------------------------------------------
+
+
+</script>
+<!-- ancillaries -->
+<script type="text/javascript" src="game_files/j_e_javascript/functions/ancillary_game_functions/__click_and_back_function_ancillaries__.js"></script>
+<!--
+I. The In-Game Mouse - Enter Input Switch                                    -->
+<script type="text/javascript" src="game_files/j_e_gui/ingame_gui/__mouse_enter_functions__.js"></script>
+<!--
+II. The In-Game Input Swtich
+                                                                             -->
+<script type="text/javascript" src="game_files/j_e_gui/ingame_gui/__click_input_switch__.js"></script>
+<!--
+III. The In-Game Back Input Switch                                           -->
+<script type="text/javascript" src="game_files/j_e_gui/ingame_gui/__back_input_switch__.js"></script> <!-- what could even go inside these? -->
+<!--
+IV. The Key-Down Input Switch                                                -->
+<script type="text/javascript" src="game_files/j_e_gui/ingame_gui/__keydown_input_switch__.js"></script>
+
+
+<script type="text/javascript">
+$("#loading_shield").switchClass("z_pos_1000", "general_z_neg_20", 0);
+</script>
+    </body>
+</html>

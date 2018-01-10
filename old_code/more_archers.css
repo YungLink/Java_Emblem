@@ -1,0 +1,379 @@
+div.npc_archer_red_team_02 {
+	content:src(game_files/j_e_images/new_characters/green_archer/npc_archer_red_team);
+	height: 58px;
+	width: 58px;
+	z-index: 2;
+	position: fixed;
+	opacity: 1;
+}
+div.selected_npc_archer_red_team_02 {
+	content:src(game_files/j_e_images/new_characters/green_archer/blued_npc_archer_red_team);
+	height: 58px;
+	width: 58px;
+	z-index: 2;
+	border-radius: 4px;
+	position: fixed;
+	opacity: 1;
+}
+div.greyed_npc_archer_red_team_02 {
+	content:src(game_files/j_e_images/new_characters/green_archer/greyed_npc_archer_red_team);
+	height: 58px;
+	width: 58px;
+	z-index: 2;
+	position: fixed;
+	opacity: 1;
+}
+div.blued_npc_archer_red_team_02 {
+	content:src(game_files/j_e_images/new_characters/green_archer/blued_npc_archer_red_team);
+	height: 58px;
+	width: 58px;
+	z-index: 2;
+	border-radius: 4px;
+	position: fixed;
+	opacity: 1;
+}
+div.reded_npc_archer_red_team_02 {
+	content:src(game_files/j_e_images/new_characters/green_archer/reded_npc_archer_red_team);
+	height: 58px;
+	width: 58px;
+	z-index: 2;
+	border-radius: 4px;
+	position: fixed;
+	opacity: 1;
+}
+div.greyed_blued_npc_archer_red_team_02 {
+	content:src(game_files/j_e_images/new_characters/green_archer/greyed_blued_npc_archer_red_team);
+	height: 58px;
+	width: 58px;
+	z-index: 2;
+	border-radius: 4px;
+	position: fixed;
+	opacity: 1;
+}
+div.greyed_reded_npc_archer_red_team_02 {
+	content:src(game_files/j_e_images/new_characters/green_archer/greyed_reded_npc_archer_red_team);
+	height: 58px;
+	width: 58px;
+	z-index: 2;
+	border-radius: 4px;
+	position: fixed;
+	opacity: 1;
+}
+/*
+npc_archer_green_team		*/
+div.npc_archer_green_team {
+	content:src(game_files/j_e_images/new_characters/red_archer/npc_archer_green_team);
+	height: 58px;
+	width: 58px;
+	z-index: 2;
+	position: fixed;
+	opacity: 1;
+}
+div.selected_npc_archer_green_team_02 {
+	content:src(game_files/j_e_images/new_characters/red_archer/blued_npc_archer_green_team);
+	height: 58px;
+	width: 58px;
+	z-index: 2;
+	border-radius: 4px;
+	position: fixed;
+	opacity: 1;
+}
+div.greyed_npc_archer_green_team_02 {
+	content:src(game_files/j_e_images/new_characters/red_archer/greyed_npc_archer_green_team);
+	height: 58px;
+	width: 58px;
+	z-index: 2;
+	position: fixed;
+	opacity: 1;
+}
+div.blued_npc_archer_green_team_02 {
+	content:src(game_files/j_e_images/new_characters/red_archer/blued_npc_archer_green_team);
+	height: 58px;
+	width: 58px;
+	z-index: 2;
+	border-radius: 4px;
+	position: fixed;
+	opacity: 1;
+}
+div.reded_npc_archer_green_team_02 {
+	content:src(game_files/j_e_images/new_characters/red_archer/reded_npc_archer_green_team);
+	height: 58px;
+	width: 58px;
+	z-index: 2;
+	border-radius: 4px;
+	position: fixed;
+	opacity: 1;
+}
+div.greyed_blued_npc_archer_green_team_02 {
+	content:src(game_files/j_e_images/new_characters/red_archer/greyed_blued_npc_archer_green_team);
+	height: 58px;
+	width: 58px;
+	z-index: 2;
+	border-radius: 4px;
+	position: fixed;
+	opacity: 1;
+}
+div.greyed_reded_npc_archer_green_team_02 {
+	content:src(game_files/j_e_images/new_characters/red_archer/greyed_reded_npc_archer_green_team);
+	height: 58px;
+	width: 58px;
+	z-index: 2;
+	border-radius: 4px;
+	position: fixed;
+	opacity: 1;
+}
+
+
+
+div.npc_archer_red_team_03 {
+	content:src(game_files/j_e_images/new_characters/green_archer/npc_archer_red_team);
+	height: 58px;
+	width: 58px;
+	z-index: 2;
+	position: fixed;
+	opacity: 1;
+}
+div.selected_npc_archer_red_team_03 {
+	content:src(game_files/j_e_images/new_characters/green_archer/blued_npc_archer_red_team);
+	height: 58px;
+	width: 58px;
+	z-index: 2;
+	border-radius: 4px;
+	position: fixed;
+	opacity: 1;
+}
+div.greyed_npc_archer_red_team_03 {
+	content:src(game_files/j_e_images/new_characters/green_archer/greyed_npc_archer_red_team);
+	height: 58px;
+	width: 58px;
+	z-index: 2;
+	position: fixed;
+	opacity: 1;
+}
+div.blued_npc_archer_red_team_03 {
+	content:src(game_files/j_e_images/new_characters/green_archer/blued_npc_archer_red_team);
+	height: 58px;
+	width: 58px;
+	z-index: 2;
+	border-radius: 4px;
+	position: fixed;
+	opacity: 1;
+}
+div.reded_npc_archer_red_team_03 {
+	content:src(game_files/j_e_images/new_characters/green_archer/reded_npc_archer_red_team);
+	height: 58px;
+	width: 58px;
+	z-index: 2;
+	border-radius: 4px;
+	position: fixed;
+	opacity: 1;
+}
+div.greyed_blued_npc_archer_red_team_03 {
+	content:src(game_files/j_e_images/new_characters/green_archer/greyed_blued_npc_archer_red_team);
+	height: 58px;
+	width: 58px;
+	z-index: 2;
+	border-radius: 4px;
+	position: fixed;
+	opacity: 1;
+}
+div.greyed_reded_npc_archer_red_team_03 {
+	content:src(game_files/j_e_images/new_characters/green_archer/greyed_reded_npc_archer_red_team);
+	height: 58px;
+	width: 58px;
+	z-index: 2;
+	border-radius: 4px;
+	position: fixed;
+	opacity: 1;
+}
+/*
+npc_archer_green_team		*/
+div.npc_archer_green_team_03 {
+	content:src(game_files/j_e_images/new_characters/red_archer/npc_archer_green_team);
+	height: 58px;
+	width: 58px;
+	z-index: 2;
+	position: fixed;
+	opacity: 1;
+}
+div.selected_npc_archer_green_team_03 {
+	content:src(game_files/j_e_images/new_characters/red_archer/blued_npc_archer_green_team);
+	height: 58px;
+	width: 58px;
+	z-index: 2;
+	border-radius: 4px;
+	position: fixed;
+	opacity: 1;
+}
+div.greyed_npc_archer_green_team_03 {
+	content:src(game_files/j_e_images/new_characters/red_archer/greyed_npc_archer_green_team);
+	height: 58px;
+	width: 58px;
+	z-index: 2;
+	position: fixed;
+	opacity: 1;
+}
+div.blued_npc_archer_green_team_03 {
+	content:src(game_files/j_e_images/new_characters/red_archer/blued_npc_archer_green_team);
+	height: 58px;
+	width: 58px;
+	z-index: 2;
+	border-radius: 4px;
+	position: fixed;
+	opacity: 1;
+}
+div.reded_npc_archer_green_team_03 {
+	content:src(game_files/j_e_images/new_characters/red_archer/reded_npc_archer_green_team);
+	height: 58px;
+	width: 58px;
+	z-index: 2;
+	border-radius: 4px;
+	position: fixed;
+	opacity: 1;
+}
+div.greyed_blued_npc_archer_green_team_03 {
+	content:src(game_files/j_e_images/new_characters/red_archer/greyed_blued_npc_archer_green_team);
+	height: 58px;
+	width: 58px;
+	z-index: 2;
+	border-radius: 4px;
+	position: fixed;
+	opacity: 1;
+}
+div.greyed_reded_npc_archer_green_team_03 {
+	content:src(game_files/j_e_images/new_characters/red_archer/greyed_reded_npc_archer_green_team);
+	height: 58px;
+	width: 58px;
+	z-index: 2;
+	border-radius: 4px;
+	position: fixed;
+	opacity: 1;
+}
+
+
+
+
+div.npc_archer_red_team_04 {
+	content:src(game_files/j_e_images/new_characters/green_archer/npc_archer_red_team);
+	height: 58px;
+	width: 58px;
+	z-index: 2;
+	position: fixed;
+	opacity: 1;
+}
+div.selected_npc_archer_red_team_04 {
+	content:src(game_files/j_e_images/new_characters/green_archer/blued_npc_archer_red_team);
+	height: 58px;
+	width: 58px;
+	z-index: 2;
+	border-radius: 4px;
+	position: fixed;
+	opacity: 1;
+}
+div.greyed_npc_archer_red_team_04 {
+	content:src(game_files/j_e_images/new_characters/green_archer/greyed_npc_archer_red_team);
+	height: 58px;
+	width: 58px;
+	z-index: 2;
+	position: fixed;
+	opacity: 1;
+}
+div.blued_npc_archer_red_team_04 {
+	content:src(game_files/j_e_images/new_characters/green_archer/blued_npc_archer_red_team);
+	height: 58px;
+	width: 58px;
+	z-index: 2;
+	border-radius: 4px;
+	position: fixed;
+	opacity: 1;
+}
+div.reded_npc_archer_red_team_04 {
+	content:src(game_files/j_e_images/new_characters/green_archer/reded_npc_archer_red_team);
+	height: 58px;
+	width: 58px;
+	z-index: 2;
+	border-radius: 4px;
+	position: fixed;
+	opacity: 1;
+}
+div.greyed_blued_npc_archer_red_team_04 {
+	content:src(game_files/j_e_images/new_characters/green_archer/greyed_blued_npc_archer_red_team);
+	height: 58px;
+	width: 58px;
+	z-index: 2;
+	border-radius: 4px;
+	position: fixed;
+	opacity: 1;
+}
+div.greyed_reded_npc_archer_red_team_04 {
+	content:src(game_files/j_e_images/new_characters/green_archer/greyed_reded_npc_archer_red_team);
+	height: 58px;
+	width: 58px;
+	z-index: 2;
+	border-radius: 4px;
+	position: fixed;
+	opacity: 1;
+}
+/*
+npc_archer_green_team		*/
+div.npc_archer_green_team_04 {
+	content:src(game_files/j_e_images/new_characters/red_archer/npc_archer_green_team);
+	height: 58px;
+	width: 58px;
+	z-index: 2;
+	position: fixed;
+	opacity: 1;
+}
+div.selected_npc_archer_green_team_04 {
+	content:src(game_files/j_e_images/new_characters/red_archer/blued_npc_archer_green_team);
+	height: 58px;
+	width: 58px;
+	z-index: 2;
+	border-radius: 4px;
+	position: fixed;
+	opacity: 1;
+}
+div.greyed_npc_archer_green_team_04 {
+	content:src(game_files/j_e_images/new_characters/red_archer/greyed_npc_archer_green_team);
+	height: 58px;
+	width: 58px;
+	z-index: 2;
+	position: fixed;
+	opacity: 1;
+}
+div.blued_npc_archer_green_team_04 {
+	content:src(game_files/j_e_images/new_characters/red_archer/blued_npc_archer_green_team);
+	height: 58px;
+	width: 58px;
+	z-index: 2;
+	border-radius: 4px;
+	position: fixed;
+	opacity: 1;
+}
+div.reded_npc_archer_green_team_04 {
+	content:src(game_files/j_e_images/new_characters/red_archer/reded_npc_archer_green_team);
+	height: 58px;
+	width: 58px;
+	z-index: 2;
+	border-radius: 4px;
+	position: fixed;
+	opacity: 1;
+}
+div.greyed_blued_npc_archer_green_team_04 {
+	content:src(game_files/j_e_images/new_characters/red_archer/greyed_blued_npc_archer_green_team);
+	height: 58px;
+	width: 58px;
+	z-index: 2;
+	border-radius: 4px;
+	position: fixed;
+	opacity: 1;
+}
+div.greyed_reded_npc_archer_green_team_04 {
+	content:src(game_files/j_e_images/new_characters/red_archer/greyed_reded_npc_archer_green_team);
+	height: 58px;
+	width: 58px;
+	z-index: 2;
+	border-radius: 4px;
+	position: fixed;
+	opacity: 1;
+}

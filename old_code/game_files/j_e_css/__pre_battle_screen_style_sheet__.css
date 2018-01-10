@@ -1,0 +1,210 @@
+div.left_char_name {
+  position: fixed;
+  top: 385px;
+  left: 30px;
+  font-family:"Lucida Sans Typewriter", "Lucida Console", monaco, "Bitstream Vera Sans Mono", monospace;
+  font-size: 30px;
+}
+div.left_weap_name {
+  position: fixed;
+  top: 432px;
+  left: 70px;
+  font-family:"Lucida Sans Typewriter", "Lucida Console", monaco, "Bitstream Vera Sans Mono", monospace;
+  font-size: 15px;
+}
+div.left_weap_uses {
+  position: fixed;
+  top: 432px;
+  left: 260px;
+  font-family:"Lucida Sans Typewriter", "Lucida Console", monaco, "Bitstream Vera Sans Mono", monospace;
+  font-size: 15px;
+}
+div.left_hp_marker {
+  position: fixed;
+  top: 450px;
+  left: 50px;
+  font-family:"Lucida Sans Typewriter", "Lucida Console", monaco, "Bitstream Vera Sans Mono", monospace;
+  font-size: 42px;
+  color: #4d3400;
+}
+div.left_curr_hp {
+  position: fixed;
+  top: 450px;
+  left: 175px;
+  font-family:"Lucida Sans Typewriter", "Lucida Console", monaco, "Bitstream Vera Sans Mono", monospace;
+  font-size: 42px;
+  color: #4d3400;
+}
+div.left_max_hp {
+  position: fixed;
+  top: 479px;
+  left: 226px;
+  font-family:"Lucida Sans Typewriter", "Lucida Console", monaco, "Bitstream Vera Sans Mono", monospace;
+  font-size: 15px;
+  color: #4d3400;
+}
+div.left_damage_marker {
+  position: fixed;
+  top: 503px;
+  left: 50px;
+  font-family:"Lucida Sans Typewriter", "Lucida Console", monaco, "Bitstream Vera Sans Mono", monospace;
+  font-size: 15px;
+  color: #ffefcc;
+}
+div.left_damage {
+  position: fixed;
+  top: 504px;
+  left: 175px;
+  font-family:"Lucida Sans Typewriter", "Lucida Console", monaco, "Bitstream Vera Sans Mono", monospace;
+  font-size: 15px;
+}
+div.left_hit_marker {
+  position: fixed;
+  top: 528px;
+  left: 50px;
+  font-family:"Lucida Sans Typewriter", "Lucida Console", monaco, "Bitstream Vera Sans Mono", monospace;
+  font-size: 15px;
+  color: #ffefcc;
+}
+div.left_hit {
+  position: fixed;
+  top: 528px;
+  left: 175px;
+  font-family:"Lucida Sans Typewriter", "Lucida Console", monaco, "Bitstream Vera Sans Mono", monospace;
+  font-size: 15px;
+}
+div.left_crit_marker {
+  position: fixed;
+  top: 552px;
+  left: 50px;
+  font-family:"Lucida Sans Typewriter", "Lucida Console", monaco, "Bitstream Vera Sans Mono", monospace;
+  font-size: 15px;
+  color: #ffefcc;
+}
+div.left_crit {
+	position: fixed;
+	top: 552px;
+	left: 175px;
+	font-family: "Lucida Sans Typewriter", "Lucida Console", monaco, "Bitstream Vera Sans Mono", monospace;
+	font-size: 15px;
+}
+/* right player pre-attack screen */
+div.right_char_name {
+  position: fixed;
+  top: 385px;
+  left: 335px;
+  font-family: "Lucida Sans Typewriter", "Lucida Console", monaco, "Bitstream Vera Sans Mono", monospace;
+  font-size: 30px;
+}
+div.right_weap_name {
+	position: fixed;
+	top: 432px;
+	left: 355px;
+	font-family: "Lucida Sans Typewriter", "Lucida Console", monaco, "Bitstream Vera Sans Mono", monospace;
+	font-size: 15px;
+}
+div.right_weap_uses {
+	position: fixed;
+	top: 432px;
+	left: 559px ;
+	font-family:"Lucida Sans Typewriter", "Lucida Console", monaco, "Bitstream Vera Sans Mono", monospace;
+	font-size: 15px;
+}
+div.right_hp_marker {
+	position: fixed;
+	top: 450px;
+	left: 477px;
+	font-family: "Lucida Sans Typewriter", "Lucida Console", monaco, "Bitstream Vera Sans Mono", monospace;
+	font-size: 42px;
+	color: #4d3400;
+}
+div.right_curr_hp {
+	position: fixed;
+	top: 450px;
+	left: 347px;
+	font-family: "Lucida Sans Typewriter", "Lucida Console", monaco, "Bitstream Vera Sans Mono", monospace;
+	font-size: 42px;
+	color: #4d3400;
+}
+div.right_max_hp {
+	position: fixed;
+	top: 479px;
+	left: 402px;
+	font-family: "Lucida Sans Typewriter", "Lucida Console", monaco, "Bitstream Vera Sans Mono", monospace;
+	font-size: 15px;
+	color: #4d3400;
+}
+div.right_damage_marker {
+	position: fixed;
+	top: 503px;
+	left: 520px;
+	font-family: "Lucida Sans Typewriter", "Lucida Console", monaco, "Bitstream Vera Sans Mono", monospace;
+	font-size: 15px;
+	color: #ffefcc;
+}
+div.right_damage {
+  position: fixed;
+  top: 504px;
+  left: 385px;
+  font-family:"Lucida Sans Typewriter", "Lucida Console", monaco, "Bitstream Vera Sans Mono", monospace;
+  font-size: 15px;
+}
+div.right_hit_marker {
+	position: fixed;
+	top: 528px;
+	left: 520px;
+	font-family: "Lucida Sans Typewriter", "Lucida Console", monaco, "Bitstream Vera Sans Mono", monospace;
+	font-size: 15px;
+	color: #ffefcc;
+}
+div.right_hit {
+	position: fixed;
+	top: 528px;
+	left: 385px;
+	font-family: "Lucida Sans Typewriter", "Lucida Console", monaco, "Bitstream Vera Sans Mono", monospace;
+	font-size: 15px;
+}
+div.right_crit {
+	position: fixed;
+	top: 552px;
+	left: 385px;
+	font-family:"Lucida Sans Typewriter", "Lucida Console", monaco, "Bitstream Vera Sans Mono", monospace;
+	font-size: 15px;
+}
+div.right_crit_marker {
+	position: fixed;
+	top: 552px;
+	left: 520px;
+	font-family: "Lucida Sans Typewriter", "Lucida Console", monaco, "Bitstream Vera Sans Mono", monospace;
+	font-size: 15px;
+	color: #ffefcc;
+}
+
+div.pre_battle_screen_element_neg4 {
+  z-index: -4;
+}
+div.pre_battle_screen_element_neg5 {
+  z-index: -5;
+}
+div.pre_battle_screen_element_pos6 {
+  z-index: 6;
+}
+div.pre_battle_screen_element_pos7 {
+  z-index: 7;
+}
+
+
+
+/*the images, added later*/
+div.pre_atck_rec_left {
+	position: fixed;
+	z-index: -5;
+	top: 425px;
+	left: 8px;
+}
+div.pre_atck_rec_right {
+	position: fixed;
+	z-index: -5;
+	top: 425px;
+	left: 308px;
+}

@@ -1,0 +1,1095 @@
+#loading_shield {
+  position: fixed;
+  height: 610px;
+  width: 610px;
+}
+.z_pos_1000 {
+    z-index: 1000;
+    background-color: #ffbf80;
+    text-align: center;
+    vertical-align: middle;
+}
+
+/* style types */
+div.mpt {
+    height: 58px;
+    width: 58px;
+    opacity: 0;
+    border-radius: 4px;
+    background-color: #00bfff;
+    position: fixed;
+    z-index: 0;
+}
+div.mpt_blue {
+    height: 58px;
+    width: 58px;
+    opacity: .75;
+    border-radius: 4px;
+    background-color: #00bfff;
+    position: fixed;
+    z-index: 0;
+}
+div.mpt_red {
+    height: 58px;
+    width: 58px;
+    opacity: .5;
+    border-radius: 4px;
+    background-color: #ff0000;
+    position: fixed;
+    z-index: 0;
+}
+div.cle {
+	height: 60px;
+	width: 60px;
+	z-index: 1;
+	opacity: 0;
+	background-color: #a3c2c2;
+	position: fixed;
+}
+div.cle_cursor {
+	height: 46px;
+	width: 46px;
+	z-index: 1;
+	border-style: solid;
+	border-width: 7px;
+	opacity: .5;
+	border-color: #ffa31a;
+	position: fixed;
+	border-style: dashed dashed dashed dashed;
+}
+div.cle_blue {
+	height: 60px;
+	width: 60px;
+	z-index: 1;
+	opacity: 0;
+	background-color: #a3c2c2;
+	position: fixed;
+}
+
+div.clickable_ex_char_menu_part {
+	background-color: #f0f5f5;
+	opacity: 0.7;
+}
+div.clickable_ex_char_menu_part_lit {
+	background-color: #ffffff;
+	opacity: 1;
+}
+/* i have to keep thinking of different ways to approach this. */
+div.signal {
+	opacity: 1;
+	background-color: #f0f5f5;
+	z-index: 7;
+	height: 100px;
+	width: 100px;
+	position: fixed;
+}
+
+div.z_index_neg_4 {
+	z-index: -4;
+}
+div.z_index_5 {
+	z-index: 5;
+	text-align: center; /* i put this here out of laziness */
+}
+/*         -    -    -           */
+/*    unit class establishment   */
+/*         -    -    -           */
+/*    green team to follow       */
+/*         -    -    -           */
+
+/* I could create all that follows in a single for statement taking nothing but array values of the urls. */
+
+
+/* var green_paladin []
+ i need to figure out my final organization model, here. what is my whole step by step?
+
+*/
+/*
+// please see outside documentation for information on what is stored where
+// i'm not sure whether i want to turn this into an object later, but it will have to stay as it is for now.
+// i guess i'll just try to make it so that the order can easily be shifted around, later. to a more logical setup with organizing principles behind it.
+// although, i guess that if i decide to create all of the "templates", then i might as well put these right there in the templates.
+var url_array = {
+	the_array: [	// green_paladin:
+	//--// regular , selected, greyed, blued, reded, greyed & blued, greyed & reded.
+	["http://i1038.photobucket.com/albums/a463/yung_link/Java%20Emblem%20Reference%202/seth_zpsgxfn2yni.png",
+	"http://i1038.photobucket.com/albums/a463/yung_link/Java%20Emblem%20Reference%202/Java%20Emblem%20Reference%205/seth%20selected_zpsstogp72g.png",
+	"http://i1038.photobucket.com/albums/a463/yung_link/Java%20Emblem%20Reference%202/seth%20moved_zpswldu79gl.png",
+	"http://i1038.photobucket.com/albums/a463/yung_link/Java%20Emblem%20Reference%202/Java%20Emblem%20Reference%205/seth%20blue_zpsjx5v8yvs.png",
+	"http://i1038.photobucket.com/albums/a463/yung_link/Java%20Emblem%20Reference%202/Java%20Emblem%20Reference%205/seth%20red_zpsbotkhq7k.png",
+	"http://i1038.photobucket.com/albums/a463/yung_link/Java%20Emblem%20Reference%202/Java%20Emblem%20Reference%205/seth%20moved%20blue_zpsigziybbd.png",
+	"http://i1038.photobucket.com/albums/a463/yung_link/Java%20Emblem%20Reference%202/Java%20Emblem%20Reference%205/seth%20moved%20red_zpsd0fzmcg5.png"],
+
+	// green_knight
+	//--// like above, and so on ...
+	["http://i1038.photobucket.com/albums/a463/yung_link/Java%20Emblem%20Reference%202/green%20knight_zps16metxql.png",
+	"http://i1038.photobucket.com/albums/a463/yung_link/Java%20Emblem%20Reference%202/Java%20Emblem%20Reference%205/green%20knight%20selected_zpsddfsmdyu.png",
+	"http://i1038.photobucket.com/albums/a463/yung_link/Java%20Emblem%20Reference%202/green%20knight%20moved_zpsi6ce7psy.png",
+	"http://i1038.photobucket.com/albums/a463/yung_link/Java%20Emblem%20Reference%202/Java%20Emblem%20Reference%205/green%20knight%20blue_zpswwowdht3.png",
+	"http://i1038.photobucket.com/albums/a463/yung_link/Java%20Emblem%20Reference%202/Java%20Emblem%20Reference%205/green%20knight%20red_zpse1ijizt8.png",
+	"http://i1038.photobucket.com/albums/a463/yung_link/Java%20Emblem%20Reference%202/Java%20Emblem%20Reference%205/green%20knight%20moved%20blue_zps3almtqo2.png",
+	"http://i1038.photobucket.com/albums/a463/yung_link/Java%20Emblem%20Reference%202/Java%20Emblem%20Reference%205/green%20knight%20moved%20%20red_zpsmdmywcxz.png"],
+
+	// red_young_erica_type_lord: 	  <-- this isn't specifically the class type, its actually the animation type, which is only almost always the same thing.
+	["http://i1038.photobucket.com/albums/a463/yung_link/Java%20Emblem%20Reference%202/erica%202.%20_zpskzzkxqfa.png",
+	"http://i1038.photobucket.com/albums/a463/yung_link/Java%20Emblem%20Reference%202/Java%20Emblem%20Reference%205/erica%202.%20%20selected_zpso5ntqqx4.png",
+	"http://i1038.photobucket.com/albums/a463/yung_link/Java%20Emblem%20Reference%202/erica%202.%20%20grey_zpsgyj0eqym.png",
+	"http://i1038.photobucket.com/albums/a463/yung_link/Java%20Emblem%20Reference%202/Java%20Emblem%20Reference%205/erica%202.%20%20blue_zpsgzzkwhc7.png",
+	"http://i1038.photobucket.com/albums/a463/yung_link/Java%20Emblem%20Reference%202/Java%20Emblem%20Reference%205/erica%202.%20%20red_zpsxmdqc2ak.png",
+	"http://i1038.photobucket.com/albums/a463/yung_link/Java%20Emblem%20Reference%202/Java%20Emblem%20Reference%205/erica%202.%20%20grey%20blue_zpswvpr6dgf.png",
+	"http://i1038.photobucket.com/albums/a463/yung_link/Java%20Emblem%20Reference%202/Java%20Emblem%20Reference%205/erica%202.%20%20grey%20red_zpsh7onl9jv.png"],
+
+	// red_knight:
+	["http://i1038.photobucket.com/albums/a463/yung_link/Java%20Emblem%20Reference%202/red%20knight%20selected_zpslfu6iv0s.png",
+	"http://i1038.photobucket.com/albums/a463/yung_link/Java%20Emblem%20Reference%202/Java%20Emblem%20Reference%205/red%20knight%20selected_zps6eufdq6b.png",
+	"http://i1038.photobucket.com/albums/a463/yung_link/Java%20Emblem%20Reference%202/red%20knight%20moved_zps9dug6unh.png",
+	"http://i1038.photobucket.com/albums/a463/yung_link/Java%20Emblem%20Reference%202/Java%20Emblem%20Reference%205/red%20knight%20blue_zpsdeoivzfh.png",
+	"http://i1038.photobucket.com/albums/a463/yung_link/Java%20Emblem%20Reference%202/Java%20Emblem%20Reference%205/red%20knight%20red_zpsht9kc3pt.png",
+	"http://i1038.photobucket.com/albums/a463/yung_link/Java%20Emblem%20Reference%202/Java%20Emblem%20Reference%205/red%20knight%20moved%20blue_zpsd0bvvzet.png",
+	"http://i1038.photobucket.com/albums/a463/yung_link/Java%20Emblem%20Reference%202/Java%20Emblem%20Reference%205/red%20knight%20moved%20red_zpsvlwqa8pb.png"],
+
+	// red_sage:
+	["http://i1038.photobucket.com/albums/a463/yung_link/Java%20Emblem%20Reference%202/red%20sage_zpscadokpkh.png",
+	"http://i1038.photobucket.com/albums/a463/yung_link/Java%20Emblem%20Reference%202/Java%20Emblem%20Reference%205/red%20sage%20selected_zpsxsvjwurb.png",
+	"http://i1038.photobucket.com/albums/a463/yung_link/Java%20Emblem%20Reference%202/red%20sage%20moved_zpsfqv9rott.png",
+	"http://i1038.photobucket.com/albums/a463/yung_link/Java%20Emblem%20Reference%202/Java%20Emblem%20Reference%205/red%20sage%20blue_zps6u1pdzwn.png",
+	"http://i1038.photobucket.com/albums/a463/yung_link/Java%20Emblem%20Reference%202/Java%20Emblem%20Reference%205/red%20sage%20red_zpszx5tlgkh.png",
+	"http://i1038.photobucket.com/albums/a463/yung_link/Java%20Emblem%20Reference%202/Java%20Emblem%20Reference%205/red%20sage%20moved%20blue_zps71gifo86.png",
+	"http://i1038.photobucket.com/albums/a463/yung_link/Java%20Emblem%20Reference%202/Java%20Emblem%20Reference%205/red%20sage%20moved%20red_zpsbhzvnswq.png"]
+]
+};
+
+*/
+/*    green seth1                */
+div.seth1 {
+	content:url(http://i1038.photobucket.com/albums/a463/yung_link/Java%20Emblem%20Reference%202/seth_zpsgxfn2yni.png);
+	height: 58px;    /* needs to not be a magic number. */
+	width: 58px;   /* needs to not be a magic number. */
+	z-index: 2;
+	position: fixed;
+	opacity: 1;
+	border: 0;
+}
+div.selected_seth1 {
+	content:url(http://i1038.photobucket.com/albums/a463/yung_link/Java%20Emblem%20Reference%202/Java%20Emblem%20Reference%205/seth%20selected_zpsstogp72g.png);
+	height: 58px;    /* needs to not be a magic number. */
+	width: 58px;     /* needs to not be a magic number. */
+	z-index: 2;
+	border-radius: 4px;
+	position: fixed;
+	opacity: 1;
+}
+div.greyed_seth1 {
+	content:url(http://i1038.photobucket.com/albums/a463/yung_link/Java%20Emblem%20Reference%202/seth%20moved_zpswldu79gl.png);
+	height: 58px;    /* needs to not be a magic number.... */
+	width: 58px;   /* and so on...... */
+	z-index: 2;
+	position: fixed;
+	opacity: 1;
+}
+div.blued_seth1 {
+	content:url(http://i1038.photobucket.com/albums/a463/yung_link/Java%20Emblem%20Reference%202/Java%20Emblem%20Reference%205/seth%20blue_zpsjx5v8yvs.png);
+	height: 58px;
+	width: 58px;
+	z-index: 2;
+	border-radius: 4px;
+	position: fixed;
+	opacity: 1;
+}
+div.reded_seth1 {
+	content:url(http://i1038.photobucket.com/albums/a463/yung_link/Java%20Emblem%20Reference%202/Java%20Emblem%20Reference%205/seth%20red_zpsbotkhq7k.png);
+	height: 58px;
+	width: 58px;
+	z-index: 2;
+	border-radius: 4px;
+	position: fixed;
+	opacity: 1;
+}
+div.greyed_blued_seth1 {
+	content:url(http://i1038.photobucket.com/albums/a463/yung_link/Java%20Emblem%20Reference%202/Java%20Emblem%20Reference%205/seth%20moved%20blue_zpsigziybbd.png);
+	height: 58px;
+	width: 58px;
+	z-index: 2;
+	border-radius: 4px;
+	position: fixed;
+	opacity: 1;
+}
+div.greyed_reded_seth1 {
+	content:url(http://i1038.photobucket.com/albums/a463/yung_link/Java%20Emblem%20Reference%202/Java%20Emblem%20Reference%205/seth%20moved%20red_zpsd0fzmcg5.png);
+	height: 58px;
+	width: 58px;
+	z-index: 2;
+	border-radius: 4px;
+	position: fixed;
+	opacity: 1;
+}
+/*    green npc_knight1          */
+div.npc_knight1 {
+	content:url(http://i1038.photobucket.com/albums/a463/yung_link/Java%20Emblem%20Reference%202/green%20knight_zps16metxql.png);
+	height: 58px;
+	width: 58px;
+	z-index: 2;
+	position: fixed;
+	opacity: 1;
+}
+div.selected_npc_knight1 {
+	content:url(http://i1038.photobucket.com/albums/a463/yung_link/Java%20Emblem%20Reference%202/Java%20Emblem%20Reference%205/green%20knight%20selected_zpsddfsmdyu.png);
+	height: 58px;
+	width: 58px;
+	z-index: 2;
+	border-radius: 4px;
+	position: fixed;
+	opacity: 1;
+}
+div.greyed_npc_knight1 {
+	content:url(http://i1038.photobucket.com/albums/a463/yung_link/Java%20Emblem%20Reference%202/green%20knight%20moved_zpsi6ce7psy.png);
+	height: 58px;
+	width: 58px;
+	z-index: 2;
+	position: fixed;
+	opacity: 1;
+}
+div.blued_npc_knight1 {
+	content:url(http://i1038.photobucket.com/albums/a463/yung_link/Java%20Emblem%20Reference%202/Java%20Emblem%20Reference%205/green%20knight%20blue_zpswwowdht3.png);
+	height: 58px;
+	width: 58px;
+	z-index: 2;
+	border-radius: 4px;
+	position: fixed;
+	opacity: 1;
+}
+div.reded_npc_knight1 {
+	content:url(http://i1038.photobucket.com/albums/a463/yung_link/Java%20Emblem%20Reference%202/Java%20Emblem%20Reference%205/green%20knight%20red_zpse1ijizt8.png);
+	height: 58px;
+	width: 58px;
+	z-index: 2;
+	border-radius: 4px;
+	position: fixed;
+	opacity: 1;
+}
+div.greyed_blued_npc_knight1 {
+	content:url(http://i1038.photobucket.com/albums/a463/yung_link/Java%20Emblem%20Reference%202/Java%20Emblem%20Reference%205/green%20knight%20moved%20blue_zps3almtqo2.png);
+	height: 58px;
+	width: 58px;
+	z-index: 2;
+	border-radius: 4px;
+	position: fixed;
+	opacity: 1;
+}
+div.greyed_reded_npc_knight1 {
+	content:url(http://i1038.photobucket.com/albums/a463/yung_link/Java%20Emblem%20Reference%202/Java%20Emblem%20Reference%205/green%20knight%20moved%20%20red_zpsmdmywcxz.png);
+	height: 58px;
+	width: 58px;
+	z-index: 2;
+	border-radius: 4px;
+	position: fixed;
+	opacity: 1;
+}
+/*    green npc_knight2          */
+div.npc_knight2 {
+	content:url(http://i1038.photobucket.com/albums/a463/yung_link/Java%20Emblem%20Reference%202/green%20knight_zps16metxql.png);
+	height: 58px;
+	width: 58px;
+	z-index: 2;
+	position: fixed;
+	opacity: 1;
+}
+div.selected_npc_knight2 {
+	content:url(http://i1038.photobucket.com/albums/a463/yung_link/Java%20Emblem%20Reference%202/Java%20Emblem%20Reference%205/green%20knight%20selected_zpsddfsmdyu.png);
+	height: 58px;
+	width: 58px;
+	z-index: 2;
+	border-radius: 4px;
+	position: fixed;
+	opacity: 1;
+}
+div.greyed_npc_knight2 {
+	content:url(http://i1038.photobucket.com/albums/a463/yung_link/Java%20Emblem%20Reference%202/green%20knight%20moved_zpsi6ce7psy.png);
+	height: 58px;
+	width: 58px;
+	z-index: 2;
+	position: fixed;
+	opacity: 1;
+}
+div.blued_npc_knight2 {
+	content:url(http://i1038.photobucket.com/albums/a463/yung_link/Java%20Emblem%20Reference%202/Java%20Emblem%20Reference%205/green%20knight%20blue_zpswwowdht3.png);
+	height: 58px;
+	width: 58px;
+	z-index: 2;
+	border-radius: 4px;
+	position: fixed;
+	opacity: 1;
+}
+div.reded_npc_knight2 {
+	content:url(http://i1038.photobucket.com/albums/a463/yung_link/Java%20Emblem%20Reference%202/Java%20Emblem%20Reference%205/green%20knight%20red_zpse1ijizt8.png);
+	height: 58px;
+	width: 58px;
+	z-index: 2;
+	border-radius: 4px;
+	position: fixed;
+	opacity: 1;
+}
+div.greyed_blued_npc_knight2 {
+	content:url(http://i1038.photobucket.com/albums/a463/yung_link/Java%20Emblem%20Reference%202/Java%20Emblem%20Reference%205/green%20knight%20moved%20blue_zps3almtqo2.png);
+	height: 58px;
+	width: 58px;
+	z-index: 2;
+	border-radius: 4px;
+	position: fixed;
+	opacity: 1;
+}
+div.greyed_reded_npc_knight2 {
+	content:url(http://i1038.photobucket.com/albums/a463/yung_link/Java%20Emblem%20Reference%202/Java%20Emblem%20Reference%205/green%20knight%20moved%20%20red_zpsmdmywcxz.png);
+	height: 58px;
+	width: 58px;
+	z-index: 2;
+	border-radius: 4px;
+	position: fixed;
+	opacity: 1;
+}
+/*    green npc_knight3          */
+div.npc_knight3 {
+	content:url(http://i1038.photobucket.com/albums/a463/yung_link/Java%20Emblem%20Reference%202/green%20knight_zps16metxql.png);
+	height: 58px;
+	width: 58px;
+	z-index: 2;
+	position: fixed;
+	opacity: 1;
+}
+div.selected_npc_knight3 {
+	content:url(http://i1038.photobucket.com/albums/a463/yung_link/Java%20Emblem%20Reference%202/Java%20Emblem%20Reference%205/green%20knight%20selected_zpsddfsmdyu.png);
+	height: 58px;
+	width: 58px;
+	z-index: 2;
+	border-radius: 4px;
+	position: fixed;
+	opacity: 1;
+}
+div.greyed_npc_knight3 {
+	content:url(http://i1038.photobucket.com/albums/a463/yung_link/Java%20Emblem%20Reference%202/green%20knight%20moved_zpsi6ce7psy.png);
+	height: 58px;
+	width: 58px;
+	z-index: 2;
+	position: fixed;
+	opacity: 1;
+}
+div.blued_npc_knight3 {
+	content:url(http://i1038.photobucket.com/albums/a463/yung_link/Java%20Emblem%20Reference%202/Java%20Emblem%20Reference%205/green%20knight%20blue_zpswwowdht3.png);
+	height: 58px;
+	width: 58px;
+	z-index: 2;
+	border-radius: 4px;
+	position: fixed;
+	opacity: 1;
+}
+div.reded_npc_knight3 {
+	content:url(http://i1038.photobucket.com/albums/a463/yung_link/Java%20Emblem%20Reference%202/Java%20Emblem%20Reference%205/green%20knight%20red_zpse1ijizt8.png);
+	height: 60px;
+	width: 60px;
+	z-index: 2;
+	border-radius: 4px;
+	position: fixed;
+	opacity: 1;
+}
+div.greyed_blued_npc_knight3 {
+	content:url(http://i1038.photobucket.com/albums/a463/yung_link/Java%20Emblem%20Reference%202/Java%20Emblem%20Reference%205/green%20knight%20moved%20blue_zps3almtqo2.png);
+	height: 58px;
+	width: 58px;
+	z-index: 2;
+	border-radius: 4px;
+	position: fixed;
+	opacity: 1;
+}
+div.greyed_reded_npc_knight3 {
+	content:url(http://i1038.photobucket.com/albums/a463/yung_link/Java%20Emblem%20Reference%202/Java%20Emblem%20Reference%205/green%20knight%20moved%20%20red_zpsmdmywcxz.png);
+	height: 58px;
+	width: 58px;
+	z-index: 2;
+	border-radius: 4px;
+	position: fixed;
+	opacity: 1;
+}
+
+/*    red team to follow         */
+/*    red erica1                 */
+div.erica1 {
+	content:url(http://i1038.photobucket.com/albums/a463/yung_link/Java%20Emblem%20Reference%202/erica%202.%20_zpskzzkxqfa.png);
+	height: 58px;
+	width: 58px;
+	z-index: 2;
+	position: fixed;
+	opacity: 1;
+}
+div.selected_erica1 {
+	content:url(http://i1038.photobucket.com/albums/a463/yung_link/Java%20Emblem%20Reference%202/Java%20Emblem%20Reference%205/erica%202.%20%20selected_zpso5ntqqx4.png);
+	height: 58px;
+	width: 58px;
+	z-index: 2;
+	border-radius: 4px;
+	position: fixed;
+	opacity: 1;
+}
+div.greyed_erica1 {
+	content:url(http://i1038.photobucket.com/albums/a463/yung_link/Java%20Emblem%20Reference%202/erica%202.%20%20grey_zpsgyj0eqym.png);
+	height: 58px;
+	width: 58px;
+	z-index: 2;
+	position: fixed;
+	opacity: 1;
+}
+div.blued_erica1 {
+	content:url(http://i1038.photobucket.com/albums/a463/yung_link/Java%20Emblem%20Reference%202/Java%20Emblem%20Reference%205/erica%202.%20%20blue_zpsgzzkwhc7.png);
+	height: 58px;
+	width: 58px;
+	z-index: 2;
+	border-radius: 4px;
+	position: fixed;
+	opacity: 1;
+}
+div.reded_erica1 {
+	content:url(http://i1038.photobucket.com/albums/a463/yung_link/Java%20Emblem%20Reference%202/Java%20Emblem%20Reference%205/erica%202.%20%20red_zpsxmdqc2ak.png);
+	height: 58px;
+	width: 58px;
+	z-index: 2;
+	border-radius: 4px;
+	position: fixed;
+	opacity: 1;
+}
+div.greyed_blued_erica1 {
+	content:url(http://i1038.photobucket.com/albums/a463/yung_link/Java%20Emblem%20Reference%202/Java%20Emblem%20Reference%205/erica%202.%20%20grey%20blue_zpswvpr6dgf.png);
+	height: 58px;
+	width: 58px;
+	z-index: 2;
+	border-radius: 4px;
+	position: fixed;
+	opacity: 1;
+}
+div.greyed_reded_erica1 {
+	content:url(http://i1038.photobucket.com/albums/a463/yung_link/Java%20Emblem%20Reference%202/Java%20Emblem%20Reference%205/erica%202.%20%20grey%20red_zpsh7onl9jv.png);
+	height: 58px;
+	width: 58px;
+	z-index: 2;
+	border-radius: 4px;
+	position: fixed;
+	opacity: 1;
+}
+/*    red pent                     */
+div.pent1 {
+	content:url(http://i1038.photobucket.com/albums/a463/yung_link/Java%20Emblem%20Reference%202/red%20sage_zpscadokpkh.png);
+	height: 58px;
+	width: 58px;
+	z-index: 2;
+	position: fixed;
+	opacity: 1;
+}
+div.selected_pent1 {
+	content:url(http://i1038.photobucket.com/albums/a463/yung_link/Java%20Emblem%20Reference%202/Java%20Emblem%20Reference%205/red%20sage%20selected_zpsxsvjwurb.png);
+	height: 58px;
+	width: 58px;
+	z-index: 2;
+	border-radius: 4px;
+	position: fixed;
+	opacity: 1;
+}
+div.greyed_pent1 {
+	content:url(http://i1038.photobucket.com/albums/a463/yung_link/Java%20Emblem%20Reference%202/red%20sage%20moved_zpsfqv9rott.png);
+	height: 58px;
+	width: 58px;
+	z-index: 2;
+	position: fixed;
+	opacity: 1;
+}
+div.blued_pent1 {
+	content:url(http://i1038.photobucket.com/albums/a463/yung_link/Java%20Emblem%20Reference%202/Java%20Emblem%20Reference%205/red%20sage%20blue_zps6u1pdzwn.png);
+	height: 58px;
+	width: 58px;
+	z-index: 2;
+	border-radius: 4px;
+	position: fixed;
+	opacity: 1;
+}
+div.reded_pent1 {
+	content:url(http://i1038.photobucket.com/albums/a463/yung_link/Java%20Emblem%20Reference%202/Java%20Emblem%20Reference%205/red%20sage%20red_zpszx5tlgkh.png);
+	height: 58px;
+	width: 58px;
+	z-index: 2;
+	border-radius: 4px;
+	position: fixed;
+	opacity: 1;
+}
+div.greyed_blued_pent1 {
+	content:url(http://i1038.photobucket.com/albums/a463/yung_link/Java%20Emblem%20Reference%202/Java%20Emblem%20Reference%205/red%20sage%20moved%20blue_zps71gifo86.png);
+	height: 58px;
+	width: 58px;
+	z-index: 2;
+	border-radius: 4px;
+	position: fixed;
+	opacity: 1;
+}
+div.greyed_reded_pent1 {
+	content:url(http://i1038.photobucket.com/albums/a463/yung_link/Java%20Emblem%20Reference%202/Java%20Emblem%20Reference%205/red%20sage%20moved%20red_zpsbhzvnswq.png);
+	height: 58px;
+	width: 58px;
+	z-index: 2;
+	border-radius: 4px;
+	position: fixed;
+	opacity: 1;
+}
+/*    red npc_knight001            */
+div.npc_knight001 {
+	content:url(http://i1038.photobucket.com/albums/a463/yung_link/Java%20Emblem%20Reference%202/red%20knight%20selected_zpslfu6iv0s.png);
+	height: 58px;
+	width: 58px;
+	z-index: 2;
+	position: fixed;
+	opacity: 1;
+}
+div.selected_npc_knight001 {
+	content:url(http://i1038.photobucket.com/albums/a463/yung_link/Java%20Emblem%20Reference%202/Java%20Emblem%20Reference%205/red%20knight%20selected_zps6eufdq6b.png);
+	height: 58px;
+	width: 58px;
+	z-index: 2;
+	border-radius: 4px;
+	position: fixed;
+	opacity: 1;
+}
+div.greyed_npc_knight001 {
+	content:url(http://i1038.photobucket.com/albums/a463/yung_link/Java%20Emblem%20Reference%202/red%20knight%20moved_zps9dug6unh.png);
+	height: 58px;
+	width: 58px;
+	z-index: 2;
+	position: fixed;
+	opacity: 1;
+}
+div.blued_npc_knight001 {
+	content:url(http://i1038.photobucket.com/albums/a463/yung_link/Java%20Emblem%20Reference%202/Java%20Emblem%20Reference%205/red%20knight%20blue_zpsdeoivzfh.png);
+	height: 58px;
+	width: 58px;
+	z-index: 2;
+	border-radius: 4px;
+	position: fixed;
+	opacity: 1;
+}
+div.reded_npc_knight001 {
+	content:url(http://i1038.photobucket.com/albums/a463/yung_link/Java%20Emblem%20Reference%202/Java%20Emblem%20Reference%205/red%20knight%20red_zpsht9kc3pt.png);
+	height: 58px;
+	width: 58px;
+	z-index: 2;
+	border-radius: 4px;
+	position: fixed;
+	opacity: 1;
+}
+div.greyed_blued_npc_knight001 {
+	content:url(http://i1038.photobucket.com/albums/a463/yung_link/Java%20Emblem%20Reference%202/Java%20Emblem%20Reference%205/red%20knight%20moved%20blue_zpsd0bvvzet.png);
+	height: 58px;
+	width: 58px;
+	z-index: 2;
+	border-radius: 4px;
+	position: fixed;
+	opacity: 1;
+}
+div.greyed_reded_npc_knight001 {
+	content:url(http://i1038.photobucket.com/albums/a463/yung_link/Java%20Emblem%20Reference%202/Java%20Emblem%20Reference%205/red%20knight%20moved%20red_zpsvlwqa8pb.png);
+	height: 58px;
+	width: 58px;
+	z-index: 2;
+	border-radius: 4px;
+	position: fixed;
+	opacity: 1;
+}
+/*    red npc_knight002            */
+div.npc_knight002 {
+	content:url(http://i1038.photobucket.com/albums/a463/yung_link/Java%20Emblem%20Reference%202/red%20knight%20selected_zpslfu6iv0s.png);
+	height: 58px;
+	width: 58px;
+	z-index: 2;
+	position: fixed;
+	opacity: 1;
+}
+div.selected_npc_knight002 {
+	content:url(http://i1038.photobucket.com/albums/a463/yung_link/Java%20Emblem%20Reference%202/Java%20Emblem%20Reference%205/red%20knight%20selected_zps6eufdq6b.png);
+	height: 58px;
+	width: 58px;
+	z-index: 2;
+	border-radius: 4px;
+	position: fixed;
+	opacity: 1;
+}
+div.greyed_npc_knight002 {
+	content:url(http://i1038.photobucket.com/albums/a463/yung_link/Java%20Emblem%20Reference%202/red%20knight%20moved_zps9dug6unh.png);
+	height: 58px;
+	width: 58px;
+	z-index: 2;
+	position: fixed;
+	opacity: 1;
+}
+div.blued_npc_knight002 {
+	content:url(http://i1038.photobucket.com/albums/a463/yung_link/Java%20Emblem%20Reference%202/Java%20Emblem%20Reference%205/red%20knight%20blue_zpsdeoivzfh.png);
+	height: 58px;
+	width: 58px;
+	z-index: 2;
+	border-radius: 4px;
+	position: fixed;
+	opacity: 1;
+}
+div.reded_npc_knight002 {
+	content:url(http://i1038.photobucket.com/albums/a463/yung_link/Java%20Emblem%20Reference%202/Java%20Emblem%20Reference%205/red%20knight%20red_zpsht9kc3pt.png);
+	height: 58px;
+	width: 58px;
+	z-index: 2;
+	border-radius: 4px;
+	position: fixed;
+	opacity: 1;
+}
+div.greyed_blued_npc_knight002 {
+	content:url(http://i1038.photobucket.com/albums/a463/yung_link/Java%20Emblem%20Reference%202/Java%20Emblem%20Reference%205/red%20knight%20moved%20blue_zpsd0bvvzet.png);
+	height: 58px;
+	width: 58px;
+	z-index: 2;
+	border-radius: 4px;
+	position: fixed;
+	opacity: 1;
+}
+div.greyed_reded_npc_knight002 {
+	content:url(http://i1038.photobucket.com/albums/a463/yung_link/Java%20Emblem%20Reference%202/Java%20Emblem%20Reference%205/red%20knight%20moved%20red_zpsvlwqa8pb.png);
+	height: 58px;
+	width: 58px;
+	z-index: 2;
+	border-radius: 4px;
+	position: fixed;
+	opacity: 1;
+}
+
+div.npc_archer_red_team {
+  background:
+    url(../../game_files/j_e_images/new_characters/red_archer/npc_archer_red_team.png);
+  background-size: contain;
+	height: 58px;
+	width: 58px;
+	z-index: 2;
+  border-radius: 4px;
+	position: fixed;
+	opacity: 1;
+}
+div.selected_npc_archer_red_team {
+	content:url(/game_files/j_e_images/new_characters/green_archer/blued_npc_archer_red_team.png);
+	height: 58px;
+	width: 58px;
+	z-index: 2;
+	border-radius: 4px;
+	position: fixed;
+	opacity: 1;
+}
+div.greyed_npc_archer_red_team {
+	content:url(/game_files/j_e_images/new_characters/green_archer/greyed_npc_archer_red_team.png);
+	height: 58px;
+	width: 58px;
+	z-index: 2;
+	position: fixed;
+	opacity: 1;
+}
+div.blued_npc_archer_red_team {
+	content:url(/game_files/j_e_images/new_characters/green_archer/blued_npc_archer_red_team.png);
+	height: 58px;
+	width: 58px;
+	z-index: 2;
+	border-radius: 4px;
+	position: fixed;
+	opacity: 1;
+}
+div.reded_npc_archer_red_team {
+	content:url(/game_files/j_e_images/new_characters/green_archer/reded_npc_archer_red_team.png);
+	height: 58px;
+	width: 58px;
+	z-index: 2;
+	border-radius: 4px;
+	position: fixed;
+	opacity: 1;
+}
+div.greyed_blued_npc_archer_red_team {
+	content:url(game_files/j_e_images/new_characters/green_archer/greyed_blued_npc_archer_red_team.png);
+	height: 58px;
+	width: 58px;
+	z-index: 2;
+	border-radius: 4px;
+	position: fixed;
+	opacity: 1;
+}
+div.greyed_reded_npc_archer_red_team {
+	background:
+    url(/game_files/j_e_images/new_characters/green_archer/greyed_reded_npc_archer_red_team.png);
+	height: 58px;
+	width: 58px;
+	z-index: 2;
+	border-radius: 4px;
+	position: fixed;
+	opacity: 1;
+}
+
+/*    end character list           */
+
+div.under {
+    opacity: 1;
+    border-radius: 0px;
+    z-index: -1;
+    position: fixed;
+}
+div.unit {
+	z-index: 2;
+	position: fixed;
+}
+div.O {
+    height:60px;
+    width:60px;
+    display: inline-block;
+    opacity: .5;
+    border-radius: 8px;
+    background-color:#00bfff;
+}
+
+p {
+    margin: 0;
+}
+
+div.little_game_menu {
+	width:120px;
+	display: inline-block;
+	opacity: 1;
+	z-index: 6;
+	position: fixed;
+	border-radius: 5px;
+	background-color: #cccccc;
+}
+
+/* #x1y8z-1 {
+    background-color: red;
+    z-index: -1;
+    position: absolute;
+};
+*/
+
+#left_char_name {
+    position: fixed;
+    top: 385px;
+    left: 30px;
+    font-family:"Lucida Sans Typewriter", "Lucida Console", monaco, "Bitstream Vera Sans Mono", monospace;
+    font-size: 30px;
+  }
+#left_weap_name {
+    position: fixed;
+    top: 432px;
+    left: 70px;
+    font-family:"Lucida Sans Typewriter", "Lucida Console", monaco, "Bitstream Vera Sans Mono", monospace;
+    font-size: 15px;
+  }
+#left_weap_uses {
+    position: fixed;
+    top: 432px;
+    left: 260px;
+    font-family:"Lucida Sans Typewriter", "Lucida Console", monaco, "Bitstream Vera Sans Mono", monospace;
+    font-size: 15px;
+  }
+#left_hp_marker {
+    position: fixed;
+    top: 450px;
+    left: 50px;
+    font-family:"Lucida Sans Typewriter", "Lucida Console", monaco, "Bitstream Vera Sans Mono", monospace;
+    font-size: 42px;
+    color: #4d3400;
+  }
+#left_curr_hp {
+    position: fixed;
+    top: 450px;
+    left: 175px;
+    font-family:"Lucida Sans Typewriter", "Lucida Console", monaco, "Bitstream Vera Sans Mono", monospace;
+    font-size: 42px;
+    color: #4d3400;
+  }
+#left_max_hp {
+    position: fixed;
+    top: 479px;
+    left: 226px;
+    font-family:"Lucida Sans Typewriter", "Lucida Console", monaco, "Bitstream Vera Sans Mono", monospace;
+    font-size: 15px;
+    color: #4d3400;
+  }
+#left_damage_marker {
+    position: fixed;
+    top: 503px;
+    left: 50px;
+    font-family:"Lucida Sans Typewriter", "Lucida Console", monaco, "Bitstream Vera Sans Mono", monospace;
+    font-size: 15px;
+    color: #ffefcc;
+  }
+#left_damage {
+    position: fixed;
+    top: 504px;
+    left: 175px;
+    font-family:"Lucida Sans Typewriter", "Lucida Console", monaco, "Bitstream Vera Sans Mono", monospace;
+    font-size: 15px;
+  }
+#left_hit_marker {
+    position: fixed;
+    top: 528px;
+    left: 50px;
+    font-family:"Lucida Sans Typewriter", "Lucida Console", monaco, "Bitstream Vera Sans Mono", monospace;
+    font-size: 15px;
+    color: #ffefcc;
+  }
+#left_hit {
+    position: fixed;
+    top: 528px;
+    left: 175px;
+    font-family:"Lucida Sans Typewriter", "Lucida Console", monaco, "Bitstream Vera Sans Mono", monospace;
+    font-size: 15px;
+  }
+#left_crit_marker {
+    position: fixed;
+    top: 552px;
+    left: 50px;
+    font-family:"Lucida Sans Typewriter", "Lucida Console", monaco, "Bitstream Vera Sans Mono", monospace;
+    font-size: 15px;
+    color: #ffefcc;
+  }
+#left_crit {
+  	position: fixed;
+  	top: 552px;
+  	left: 175px;
+  	font-family: "Lucida Sans Typewriter", "Lucida Console", monaco, "Bitstream Vera Sans Mono", monospace;
+  	font-size: 15px;
+  }
+  /* right player pre-attack screen */
+#right_char_name {
+    position: fixed;
+    top: 385px;
+    left: 335px;
+    font-family: "Lucida Sans Typewriter", "Lucida Console", monaco, "Bitstream Vera Sans Mono", monospace;
+    font-size: 30px;
+  }
+#right_weap_name {
+  	position: fixed;
+  	top: 432px;
+  	left: 355px;
+  	font-family: "Lucida Sans Typewriter", "Lucida Console", monaco, "Bitstream Vera Sans Mono", monospace;
+  	font-size: 15px;
+  }
+#right_weap_uses {
+  	position: fixed;
+  	top: 432px;
+  	left: 559px ;
+  	font-family:"Lucida Sans Typewriter", "Lucida Console", monaco, "Bitstream Vera Sans Mono", monospace;
+  	font-size: 15px;
+  }
+#right_hp_marker {
+  	position: fixed;
+  	top: 450px;
+  	left: 477px;
+  	font-family: "Lucida Sans Typewriter", "Lucida Console", monaco, "Bitstream Vera Sans Mono", monospace;
+  	font-size: 42px;
+  	color: #4d3400;
+  }
+#right_curr_hp {
+  	position: fixed;
+  	top: 450px;
+  	left: 347px;
+  	font-family: "Lucida Sans Typewriter", "Lucida Console", monaco, "Bitstream Vera Sans Mono", monospace;
+  	font-size: 42px;
+  	color: #4d3400;
+  }
+#right_max_hp {
+  	position: fixed;
+  	top: 479px;
+  	left: 402px;
+  	font-family: "Lucida Sans Typewriter", "Lucida Console", monaco, "Bitstream Vera Sans Mono", monospace;
+  	font-size: 15px;
+  	color: #4d3400;
+  }
+#right_damage_marker {
+  	position: fixed;
+  	top: 503px;
+  	left: 520px;
+  	font-family: "Lucida Sans Typewriter", "Lucida Console", monaco, "Bitstream Vera Sans Mono", monospace;
+  	font-size: 15px;
+  	color: #ffefcc;
+  }
+#right_damage {
+    position: fixed;
+    top: 504px;
+    left: 385px;
+    font-family:"Lucida Sans Typewriter", "Lucida Console", monaco, "Bitstream Vera Sans Mono", monospace;
+    font-size: 15px;
+  }
+#right_hit_marker {
+  	position: fixed;
+  	top: 528px;
+  	left: 520px;
+  	font-family: "Lucida Sans Typewriter", "Lucida Console", monaco, "Bitstream Vera Sans Mono", monospace;
+  	font-size: 15px;
+  	color: #ffefcc;
+  }
+#right_hit {
+  	position: fixed;
+  	top: 528px;
+  	left: 385px;
+  	font-family: "Lucida Sans Typewriter", "Lucida Console", monaco, "Bitstream Vera Sans Mono", monospace;
+  	font-size: 15px;
+  }
+#right_crit {
+  	position: fixed;
+  	top: 552px;
+  	left: 385px;
+  	font-family:"Lucida Sans Typewriter", "Lucida Console", monaco, "Bitstream Vera Sans Mono", monospace;
+  	font-size: 15px;
+  }
+#right_crit_marker {
+  	position: fixed;
+  	top: 552px;
+  	left: 520px;
+  	font-family: "Lucida Sans Typewriter", "Lucida Console", monaco, "Bitstream Vera Sans Mono", monospace;
+  	font-size: 15px;
+  	color: #ffefcc;
+  }
+
+.pre_battle_screen_element_neg4 {
+    z-index: -4;
+  }
+.pre_battle_screen_element_neg5 {
+    z-index: -5;
+  }
+.pre_battle_screen_element_pos6 {
+    z-index: 6;
+  }
+.pre_battle_screen_element_pos7 {
+    z-index: 7;
+  }
+
+  /*the images, added later*/
+#pre_atck_rec_left {
+  	position: fixed;
+  	top: 425px;
+  	left: 8px;
+  }
+#pre_atck_rec_right {
+  	position: fixed;
+  	top: 425px;
+  	left: 308px;
+  }
+
+.top_phase_change_solid_banner {
+  position: fixed;
+  top: 0px;
+  opacity: 1;
+  height: 80px;
+  width: 600px;
+  z-index: 700;
+}
+.top_phase_change_fading_banner {
+  position: fixed;
+  top: 80px;
+  opacity: 0.5;
+  height: 25px;
+  width: 600px;
+  z-index: 700;
+}
+.bottom_phase_change_fading_banner {
+  position: fixed;
+  top: 495px;
+  opacity: 0.5;
+  height: 25px;
+  width: 600px;
+  z-index: 700;
+}
+.bottom_phase_change_solid_banner {
+  position: fixed;
+  top: 520px;
+  opacity: 1;
+  height: 80px;
+  width: 600px;
+  z-index: 700;
+}
+.phase_change_white_sheet {
+  position: fixed;
+    opacity: 0.85;
+    height: 80px;
+    width: 600px;
+    background-color: #ffffff;
+}
+.z_neg_300 {
+  z-index: -300;
+}
+.z_pos_699 {
+    z-index: 699;
+}
+
+#battle_console_center_background {
+  position: fixed;
+  top: 95px;
+  left: 95px;
+  height: 410px;
+  width: 410px;
+  background-color: #b3b3b3;
+}
+/*battle console left character battle art */
+
+#battle_console_left_char_bat_art {
+  position: fixed;
+  top: 155px;
+  left: 10px;
+  height: 290px;
+  width: 115px;
+  background-color: #ffbf80;
+}
+
+#battle_console_right_char_bat_art {
+  position: fixed;
+  top: 155px;
+  left: 475px;
+  height: 290px;
+  width: 115px;
+  background-color: #ffbf80;
+}
+
+.battle_console_char_art_neg_20 {
+  z-index: -20;
+}
+
+.battle_console_text_line {
+  position: fixed;
+  background-color: #d9d9d9;
+  /* position: fixed; */
+  left: 155px;
+  width: 285px;
+}
+.right_aligned {
+  text-align: right;
+}
+
+.battle_console_element_neg_20 {
+  z-index: -20;
+}
+.general_z_neg_20 {
+  z-index: -20;
+}
+.battle_console_background_neg_20 {
+  z-index: -20;
+}
+.z_pos_10 {
+  z-index: 10;
+}
+.z_pos_11 {
+  z-index: 11;
+}
+
+.litte_health_bar {
+  position: fixed;
+  height: 8px;
+  width: 58px;
+  background-color: #00cc00;
+}
+
+.health_bar_invisible {
+  z-index: -20;
+}
+.health_bar_visible {
+  z-index: 4;
+}

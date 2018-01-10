@@ -1,0 +1,395 @@
+div.npc_fighter_green_team_02 {
+	content:src(game_files/j_e_images/new_characters/green_fighter/npc_fighter_green_team);
+	height: 58px;
+	width: 58px;
+	z-index: 2;
+	position: fixed;
+	opacity: 1;
+}
+div.selected_npc_fighter_green_team_02 {
+	content:src(game_files/j_e_images/new_characters/green_fighter/blued_npc_fighter_green_team);
+	height: 58px;
+	width: 58px;
+	z-index: 2;
+	border-radius: 4px;
+	position: fixed;
+	opacity: 1;
+}
+div.greyed_npc_fighter_green_team_02 {
+	content:src(game_files/j_e_images/new_characters/green_fighter/greyed_npc_fighter_green_team);
+	height: 58px;
+	width: 58px;
+	z-index: 2;
+	position: fixed;
+	opacity: 1;
+}
+div.blued_npc_fighter_green_team_02 {
+	content:src(game_files/j_e_images/new_characters/green_fighter/blued_npc_fighter_green_team);
+	height: 58px;
+	width: 58px;
+	z-index: 2;
+	border-radius: 4px;
+	position: fixed;
+	opacity: 1;
+}
+div.reded_npc_fighter_green_team_02 {
+	content:src(game_files/j_e_images/new_characters/green_fighter/reded_npc_fighter_green_team);
+	height: 58px;
+	width: 58px;
+	z-index: 2;
+	border-radius: 4px;
+	position: fixed;
+	opacity: 1;
+}
+div.greyed_blued_npc_fighter_green_team_02 {
+	content:src(game_files/j_e_images/new_characters/green_fighter/greyed_blued_npc_fighter_green_team);
+	height: 58px;
+	width: 58px;
+	z-index: 2;
+	border-radius: 4px;
+	position: fixed;
+	opacity: 1;
+}
+div.greyed_reded_npc_fighter_green_team_02 {
+	content:src(game_files/j_e_images/new_characters/green_fighter/greyed_reded_npc_fighter_green_team);
+	height: 58px;
+	width: 58px;
+	z-index: 2;
+	border-radius: 4px;
+	position: fixed;
+	opacity: 1;
+}
+
+/*   npc_fighter_red_team    */
+
+div.npc_fighter_red_team_02 {
+	content:src(game_files/j_e_images/new_characters/red_fighter/npc_fighter_red_team);
+	height: 58px;
+	width: 58px;
+	z-index: 2;
+	position: fixed;
+	opacity: 1;
+}
+div.selected_npc_fighter_red_team_02 {
+	content:src(game_files/j_e_images/new_characters/red_fighter/blued_npc_fighter_red_team);
+	height: 58px;
+	width: 58px;
+	z-index: 2;
+	border-radius: 4px;
+	position: fixed;
+	opacity: 1;
+}
+div.greyed_npc_fighter_red_team_02 {
+	content:src(game_files/j_e_images/new_characters/red_fighter/greyed_npc_fighter_red_team);
+	height: 58px;
+	width: 58px;
+	z-index: 2;
+	position: fixed;
+	opacity: 1;
+}
+div.blued_npc_fighter_red_team_02 {
+	content:src(game_files/j_e_images/new_characters/red_fighter/blued_npc_fighter_red_team);
+	height: 58px;
+	width: 58px;
+	z-index: 2;
+	border-radius: 4px;
+	position: fixed;
+	opacity: 1;
+}
+div.reded_npc_fighter_red_team_02 {
+	content:src(game_files/j_e_images/new_characters/red_fighter/reded_npc_fighter_red_team);
+	height: 58px;
+	width: 58px;
+	z-index: 2;
+	border-radius: 4px;
+	position: fixed;
+	opacity: 1;
+}
+div.greyed_blued_npc_fighter_red_team_02 {
+	content:src(game_files/j_e_images/new_characters/red_fighter/greyed_blued_npc_fighter_red_team);
+	height: 58px;
+	width: 58px;
+	z-index: 2;
+	border-radius: 4px;
+	position: fixed;
+	opacity: 1;
+}
+div.greyed_reded_npc_fighter_red_team_02 {
+	content:src(game_files/j_e_images/new_characters/red_fighter/greyed_reded_npc_fighter_red_team);
+	height: 58px;
+	width: 58px;
+	z-index: 2;
+	border-radius: 4px;
+	position: fixed;
+	opacity: 1;
+}
+
+
+
+
+
+
+
+
+
+
+div.npc_fighter_green_team_03 {
+	content:src(game_files/j_e_images/new_characters/green_fighter/npc_fighter_green_team);
+	height: 58px;
+	width: 58px;
+	z-index: 2;
+	position: fixed;
+	opacity: 1;
+}
+div.selected_npc_fighter_green_team_03 {
+	content:src(game_files/j_e_images/new_characters/green_fighter/blued_npc_fighter_green_team);
+	height: 58px;
+	width: 58px;
+	z-index: 2;
+	border-radius: 4px;
+	position: fixed;
+	opacity: 1;
+}
+div.greyed_npc_fighter_green_team_03 {
+	content:src(game_files/j_e_images/new_characters/green_fighter/greyed_npc_fighter_green_team);
+	height: 58px;
+	width: 58px;
+	z-index: 2;
+	position: fixed;
+	opacity: 1;
+}
+div.blued_npc_fighter_green_team_03 {
+	content:src(game_files/j_e_images/new_characters/green_fighter/blued_npc_fighter_green_team);
+	height: 58px;
+	width: 58px;
+	z-index: 2;
+	border-radius: 4px;
+	position: fixed;
+	opacity: 1;
+}
+div.reded_npc_fighter_green_team_03 {
+	content:src(game_files/j_e_images/new_characters/green_fighter/reded_npc_fighter_green_team);
+	height: 58px;
+	width: 58px;
+	z-index: 2;
+	border-radius: 4px;
+	position: fixed;
+	opacity: 1;
+}
+div.greyed_blued_npc_fighter_green_team_03 {
+	content:src(game_files/j_e_images/new_characters/green_fighter/greyed_blued_npc_fighter_green_team);
+	height: 58px;
+	width: 58px;
+	z-index: 2;
+	border-radius: 4px;
+	position: fixed;
+	opacity: 1;
+}
+div.greyed_reded_npc_fighter_green_team_03 {
+	content:src(game_files/j_e_images/new_characters/green_fighter/greyed_reded_npc_fighter_green_team);
+	height: 58px;
+	width: 58px;
+	z-index: 2;
+	border-radius: 4px;
+	position: fixed;
+	opacity: 1;
+}
+
+/*   npc_fighter_red_team    */
+
+div.npc_fighter_red_team_03 {
+	content:src(game_files/j_e_images/new_characters/red_fighter/npc_fighter_red_team);
+	height: 58px;
+	width: 58px;
+	z-index: 2;
+	position: fixed;
+	opacity: 1;
+}
+div.selected_npc_fighter_red_team_03 {
+	content:src(game_files/j_e_images/new_characters/red_fighter/blued_npc_fighter_red_team);
+	height: 58px;
+	width: 58px;
+	z-index: 2;
+	border-radius: 4px;
+	position: fixed;
+	opacity: 1;
+}
+div.greyed_npc_fighter_red_team_03 {
+	content:src(game_files/j_e_images/new_characters/red_fighter/greyed_npc_fighter_red_team);
+	height: 58px;
+	width: 58px;
+	z-index: 2;
+	position: fixed;
+	opacity: 1;
+}
+div.blued_npc_fighter_red_team_03 {
+	content:src(game_files/j_e_images/new_characters/red_fighter/blued_npc_fighter_red_team);
+	height: 58px;
+	width: 58px;
+	z-index: 2;
+	border-radius: 4px;
+	position: fixed;
+	opacity: 1;
+}
+div.reded_npc_fighter_red_team_03 {
+	content:src(game_files/j_e_images/new_characters/red_fighter/reded_npc_fighter_red_team);
+	height: 58px;
+	width: 58px;
+	z-index: 2;
+	border-radius: 4px;
+	position: fixed;
+	opacity: 1;
+}
+div.greyed_blued_npc_fighter_red_team_03 {
+	content:src(game_files/j_e_images/new_characters/red_fighter/greyed_blued_npc_fighter_red_team);
+	height: 58px;
+	width: 58px;
+	z-index: 2;
+	border-radius: 4px;
+	position: fixed;
+	opacity: 1;
+}
+div.greyed_reded_npc_fighter_red_team_03 {
+	content:src(game_files/j_e_images/new_characters/red_fighter/greyed_reded_npc_fighter_red_team);
+	height: 58px;
+	width: 58px;
+	z-index: 2;
+	border-radius: 4px;
+	position: fixed;
+	opacity: 1;
+}
+
+
+
+
+
+
+
+
+
+
+div.npc_fighter_green_team_04 {
+	content:src(game_files/j_e_images/new_characters/green_fighter/npc_fighter_green_team);
+	height: 58px;
+	width: 58px;
+	z-index: 2;
+	position: fixed;
+	opacity: 1;
+}
+div.selected_npc_fighter_green_team_04 {
+	content:src(game_files/j_e_images/new_characters/green_fighter/blued_npc_fighter_green_team);
+	height: 58px;
+	width: 58px;
+	z-index: 2;
+	border-radius: 4px;
+	position: fixed;
+	opacity: 1;
+}
+div.greyed_npc_fighter_green_team_04 {
+	content:src(game_files/j_e_images/new_characters/green_fighter/greyed_npc_fighter_green_team);
+	height: 58px;
+	width: 58px;
+	z-index: 2;
+	position: fixed;
+	opacity: 1;
+}
+div.blued_npc_fighter_green_team_04 {
+	content:src(game_files/j_e_images/new_characters/green_fighter/blued_npc_fighter_green_team);
+	height: 58px;
+	width: 58px;
+	z-index: 2;
+	border-radius: 4px;
+	position: fixed;
+	opacity: 1;
+}
+div.reded_npc_fighter_green_team_04 {
+	content:src(game_files/j_e_images/new_characters/green_fighter/reded_npc_fighter_green_team);
+	height: 58px;
+	width: 58px;
+	z-index: 2;
+	border-radius: 4px;
+	position: fixed;
+	opacity: 1;
+}
+div.greyed_blued_npc_fighter_green_team_04 {
+	content:src(game_files/j_e_images/new_characters/green_fighter/greyed_blued_npc_fighter_green_team);
+	height: 58px;
+	width: 58px;
+	z-index: 2;
+	border-radius: 4px;
+	position: fixed;
+	opacity: 1;
+}
+div.greyed_reded_npc_fighter_green_team_04 {
+	content:src(game_files/j_e_images/new_characters/green_fighter/greyed_reded_npc_fighter_green_team);
+	height: 58px;
+	width: 58px;
+	z-index: 2;
+	border-radius: 4px;
+	position: fixed;
+	opacity: 1;
+}
+
+/*   npc_fighter_red_team    */
+
+div.npc_fighter_red_team_04 {
+	content:src(game_files/j_e_images/new_characters/red_fighter/npc_fighter_red_team);
+	height: 58px;
+	width: 58px;
+	z-index: 2;
+	position: fixed;
+	opacity: 1;
+}
+div.selected_npc_fighter_red_team_04 {
+	content:src(game_files/j_e_images/new_characters/red_fighter/blued_npc_fighter_red_team);
+	height: 58px;
+	width: 58px;
+	z-index: 2;
+	border-radius: 4px;
+	position: fixed;
+	opacity: 1;
+}
+div.greyed_npc_fighter_red_team_04 {
+	content:src(game_files/j_e_images/new_characters/red_fighter/greyed_npc_fighter_red_team);
+	height: 58px;
+	width: 58px;
+	z-index: 2;
+	position: fixed;
+	opacity: 1;
+}
+div.blued_npc_fighter_red_team_04 {
+	content:src(game_files/j_e_images/new_characters/red_fighter/blued_npc_fighter_red_team);
+	height: 58px;
+	width: 58px;
+	z-index: 2;
+	border-radius: 4px;
+	position: fixed;
+	opacity: 1;
+}
+div.reded_npc_fighter_red_team_04 {
+	content:src(game_files/j_e_images/new_characters/red_fighter/reded_npc_fighter_red_team);
+	height: 58px;
+	width: 58px;
+	z-index: 2;
+	border-radius: 4px;
+	position: fixed;
+	opacity: 1;
+}
+div.greyed_blued_npc_fighter_red_team_04 {
+	content:src(game_files/j_e_images/new_characters/red_fighter/greyed_blued_npc_fighter_red_team);
+	height: 58px;
+	width: 58px;
+	z-index: 2;
+	border-radius: 4px;
+	position: fixed;
+	opacity: 1;
+}
+div.greyed_reded_npc_fighter_red_team_04 {
+	content:src(game_files/j_e_images/new_characters/red_fighter/greyed_reded_npc_fighter_red_team);
+	height: 58px;
+	width: 58px;
+	z-index: 2;
+	border-radius: 4px;
+	position: fixed;
+	opacity: 1;
+}
